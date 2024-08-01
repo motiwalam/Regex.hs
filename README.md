@@ -5,7 +5,7 @@ A regular expression matcher that does zero backtracking, implemented in Haskell
 The algorithm works by defining two functions:
 
  1. `matchesEmpty :: RegEx -> Bool` which checks if a regular expression matches the empty string.
- 2. `derive :: Char -> RegEx -> RegEx` which, given a character `c` and a regular expression `re`, returns a regular expression `re'` such that a string `a:s` matches `re` if and only if `s` matches `re'`.
+ 2. `derive :: Char -> RegEx -> RegEx` which, given a character `a` and a regular expression `re`, returns a regular expression `re'` such that a string `a:s` matches `re` if and only if `s` matches `re'`.
 
 Together, these functions enable a simple definition of `matches :: [Char] -> RegEx -> Bool`.
 
